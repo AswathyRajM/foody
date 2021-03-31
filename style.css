@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+:root {
+    --primaryColor: #E4484B;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: rgb(88, 87, 87);
+    --shadow: rgb(201, 196, 196);
+    --mainTransition: all 0.3s linear;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--mainBlack);
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------Navigation section-------- */
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 80px;
+    max-width: 1300px;
+    padding: 0 0px;
+}
+
+.nav-list ul,
+.cart-btn button {
+    display: none;
+}
+
+.hamburger img,
+.cart-btn img {
+    width: 4rem;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.brand {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+}
+
+/* -------End of navigation section-------- */
+
+/* -------Food section-------- */
+
+.food-section {
+    padding: 1rem 0;
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    flex-direction: column;
+}
+
+/* Heading section */
+
+.heading {
+    max-width: 70%;
+}
+
+.heading h1 {
+    font-size: 3.5rem;
+    text-align: left;
+    left: 0;
+    padding: 20px 0;
+}
+
+/* End of heading section */
+
+/* Food container*/
+.food-items {
+    width: 100%;
+    width: 90vw;
+    align-items: center;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2em 2em;
+    grid-template-areas: ". ."
+        ". .";
+    margin: 4rem 0;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    background: white;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 19px 19px 46px 10px var(--shadow);
+    -webkit-box-shadow: 19px 19px 46px 10px var(--shadow);
+    -moz-box-shadow: 19px 19px 46px 10px var(--shadow);
+
+}
+
+.food-item img {
+    width: 15rem;
+    border-radius: 50%;
+}
+
+.food-item p {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Roboto',
+        sans-serif;
+    letter-spacing: .1rem;
+}
+
+/*Food container*/
+
+/*Paragraph section*/
+.paragraph {
+    max-width: 95%;
+}
+
+.paragraph p {
+    text-align: left;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    color: rgb(88, 87, 87);
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+.paragraph .paragraph-underline {
+    width: 7rem;
+    background-color: var(--primaryColor);
+    height: .5rem;
+    padding-bottom: .3rem;
+}
+
+/* Paragraph section*/
+
+/* -------End of food section-------- */
+
+/* ////////////////media query for tablet//////////////// */
+
+@media only screen and (min-width: 768px) {
+
+    /* -------Navigation section tablet-------- */
+
+    .nav-bar {
+        width: 20%;
+        height: 100%;
+        min-width: 130px;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding-top: 7rem;
+    }
+
+    .nav-list ul a {
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 1.6rem;
+        display: block;
+        color: var(--mainGrey);
+        font-family: 'Roboto',
+            sans-serif;
+    }
+
+    .nav-list ul a.active {
+        text-decoration: line-through 2px var(--primaryColor);
+    }
+
+    .cart-btn button {
+        display: block;
+        padding: 18px;
+        border-radius: 35px;
+        width: 15rem;
+        background: var(--primaryColor);
+        font-size: 2rem;
+        color: var(--mainWhite);
+        border-color: transparent;
+        margin: 5rem auto;
+        cursor: pointer;
+    }
+
+    .hamburger img,
+    .cart-btn img {
+        display: none;
+    }
+
+    .brand {
+        position: absolute;
+        font-size: 3rem;
+    }
+
+    /* -------End of navigation section-------- */
+
+    /* -------Food section-------- */
+
+    .main {
+        display: flex;
+        margin: 3rem;
+    }
+
+    .food-section {
+        justify-content: center;
+        margin-left: 5rem;
+        height: 90vh;
+        width: 70vw;
+        position: relative;
+    }
+
+    /* Heading section */
+    .heading {
+        max-width: 60rem;
+        max-height: 20rem;
+        margin-top: 3rem;
+    }
+
+    .heading h1 {
+        font-size: 6rem;
+    }
+
+    /*End of Heading section */
+
+    .food-items {
+        width: 100%;
+    }
+
+    .food-item {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .food-item img {
+        width: 16rem;
+    }
+
+    .food-item p {
+        font-size: 1.7rem;
+    }
+
+    .paragraph p {
+        font-size: 1.8rem;
+    }
+
+    /* -------End of food section tablet-------- */
+}
+
+/* ////////////////media query for desktop//////////////// */
+
+@media only screen and (min-width: 1200px) {
+
+    /* -------Navigation section desktop-------- */
+    .nav-bar {
+        margin: 0 5rem;
+    }
+
+    /* -------End of navigation section desktop-------- */
+
+    /* -------Food section desktop-------- */
+
+    .heading h1 {
+        font-size: 7em;
+    }
+
+    .food-section {
+        height: 90vh;
+        width: 60vw;
+    }
+
+    .food-item img {
+        width: 17rem;
+    }
+
+    .paragraph {
+        max-width: 250px;
+        position: absolute;
+        top: 8.3rem;
+        right: -7rem;
+    }
+
+    .paragraph p {
+        font-size: 2rem;
+    }
+
+    /* -------End of food section desktop-------- */
+}
