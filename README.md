@@ -1,4 +1,4 @@
-# sampleHotel
+# Food App built with JasvaScript
 
 This repository contains responsive HTML and CSS.
 
