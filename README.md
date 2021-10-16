@@ -10,4 +10,4 @@ Download the repository and run index.html on any web browser.
 
 ## To View The Website Click On The Link Below
 
-https://aswathyrajm.github.io/sampleHotel/
+https://aswathyrajm.github.io/js-food-app/
